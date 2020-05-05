@@ -7,7 +7,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String input = "";
+  String input = null;
 
   createToDos() {
     DocumentReference documentReference =
@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
+      appBar: AppBar(
           title: Text('My To~Do App'),
           centerTitle: true,
           backgroundColor: Colors.greenAccent[700],
@@ -50,6 +50,7 @@ class _HomeState extends State<Home> {
                   }),
                   actions: <Widget>[
                     FlatButton(
+                        color:Colors.blue[900],
                         onPressed: () {
                           createToDos();
                           Navigator.of(context).pop();
@@ -72,7 +73,7 @@ class _HomeState extends State<Home> {
                 onDismissed: (direction){
                   deleteToDos(documentSnapshot["todoTitle"]);
                 },
-                  key: Key(index.toString()),
+                  key: Key(documentSnapshot["todoTitle"]),
                   child: Card(
                     elevation: 4,
                     margin: EdgeInsets.all(6),
@@ -82,7 +83,7 @@ class _HomeState extends State<Home> {
                       title: Text(documentSnapshot["todoTitle"]),
                       trailing: IconButton(
                           icon: Icon(Icons.delete),
-                          color: Colors.blue,
+                          color: Colors.blue[900],
                           onPressed: () {
                             deleteToDos(documentSnapshot["todoTitle"]);
                           }),
@@ -93,3 +94,4 @@ class _HomeState extends State<Home> {
      );
   }
 }
+
