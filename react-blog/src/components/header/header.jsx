@@ -10,7 +10,7 @@ const Header = () => {
       </div>
       <img
         className="headerImg"
-        src="https://www.diligent.es/wp-content/uploads/2015/07/contactar-a-un-blogger-para-dar-a-conocer-tu-negocio.jpg"
+        src="https://www.editionguard.com//wp-content/uploads/2016/07/1.png"
         alt=""
       />
     </div>
