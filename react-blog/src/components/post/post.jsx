@@ -16,6 +16,12 @@ const Post = () => {
         <span className="postTitle">Lorem ipsum dolor sit amet</span> <hr />
         <span className="postDate"></span>
       </div>
+      <p className="postDesc">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore
+        tempora est eaque ut odio maiores ipsum excepturi quasi voluptate magni!
+        Quia doloremque distinctio totam suscipit atque eum, modi ratione
+        maxime.
+      </p>
     </div>
   );
 };
